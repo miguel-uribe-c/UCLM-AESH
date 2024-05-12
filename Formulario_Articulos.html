@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Articulos</title>
+    <link rel="stylesheet" href="Estilo SW.css">
+    <style>
+        html{
+            background-color: black;
+            color: white;
+        }
+        table{
+            background-color: black;
+            color-scheme: white;
+        }
+        .uno{
+            text-align: center;
+        }
+        .enviar, .calificacion{
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .enviar, .calificacion{
+            background-color: #45a049;
+        }
+        h1{
+            text-align: center;
+        }
+        #nombre, #email {
+            width: 300px;
+            height: 30px;
+            padding: 4px;
+        }
+        #comentarios {
+            padding: 5px;
+        }
+        .AI{
+            padding: 6px 10px;
+            background-color: rgb(120, 223, 239);
+            color: black;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        label{
+            color: rgb(90, 219, 219);
+        }
+        .marte{
+            color:rgb(223, 67, 67);
+        }
+        .tierra{
+            color:rgb(83, 107, 244);
+        }
+        .destinos{
+            color:rgb(238, 242, 134);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contenedor-header">
+            <div class="logo-EARA">
+                <img src="http://localhost/Formul/BlogImg/blog.png" alt="EARA Blog">
+                <ul class="menu-horizontal">
+                    <li><a href="Ejemplo SW.html">Inicio</a></li>
+                    <li><a href="Categorias.html">Categorías</a></li>
+                    <li><a href="Formulario_Articulos.html">Resuelve el test</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <br><h1>Test Artículos Informátivos</h1>
+    <table cellspacing="30px">
+        <tr>
+            <td class="uno" colspan="2">
+                <p>Resuelve un pequeño test sobre los Artíulos Informativos que se exponen en mi sitio web
+                    y pon a prueba tu comprensión lectora y tu capacidad de memoria.<br>
+                    Si aun no lees mis <a href="Articulos Informativos.html"><button class="AI"><p><b>Articulos Informativos</b></p></button></a>
+                    te invito a leerlos antes de realizar el test.<br>
+                    Buena suerte! </p><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img width="600px" height="1030px" src="http://localhost/Formul/BlogImg/ghostcod.jpg">
+            </td>
+            <td>
+                <br><form id="testForm" action="Formulario.php" method="post">
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required><br>
+            
+                    <br>
+                    <label for="email">Correo electrónico:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+            
+                    <h3 class="marte">Marte. El Planeta Rojo</h3>
+                    <p>Pregunta 1. ¿Cuántos días contiene un año marciano?</p>
+                    <input type="radio" name="pregunta1" value="0"> 365 <br>
+                    <input type="radio" name="pregunta1" value="0"> 425 <br>
+                    <input type="radio" name="pregunta1" value="0"> 112 <br>
+                    <input type="radio" name="pregunta1" value="2"> 687 <br><br>
+    
+                    <p>Pregunta 2. ¿Cuántas horas terrestres contiene un día marciano?</p>
+                    <input type="radio" name="pregunta2" value="0"> 36 <br>
+                    <input type="radio" name="pregunta2" value="2"> 24.5 <br>
+                    <input type="radio" name="pregunta2" value="0"> 48 <br>
+                    <input type="radio" name="pregunta2" value="0"> 27.5<br><br>
+            
+                    <h3 class="tierra">El Planeta Tierra</h3>
+                    <p>Pregunta 3. ¿Cuál es la aceleración de la gravedad en la Tierra?</p>
+                    <input type="radio" name="pregunta3" value="0"> 10.25 m/s2 <br>
+                    <input type="radio" name="pregunta3" value="0"> 5.9 m/s2 <br>
+                    <input type="radio" name="pregunta3" value="0"> 3.14 m/s2 <br>
+                    <input type="radio" name="pregunta3" value="2"> 9.78 m/s2<br><br>
+            
+                    <p>Pregunta 4. ¿Cuál es la capa menos densa de la Tierra?</p>
+                    <input type="radio" name="pregunta4" value="2"> Litosfera <br>
+                    <input type="radio" name="pregunta4" value="0"> Manto Superior <br>
+                    <input type="radio" name="pregunta4" value="0"> Manto Terrestre <br>
+                    <input type="radio" name="pregunta4" value="0"> Corteza<br><br>
+            
+                    <h3 class="destinos">Destinos turísticos populares de México</h3>
+                    <p>Pregunta 5. ¿En qué parte de México se encuentra Chichén Itza?</p>
+                    <input type="radio" name="pregunta5" value="0"> Guadalajara <br>
+                    <input type="radio" name="pregunta5" value="2"> Península de Yucatán <br>
+                    <input type="radio" name="pregunta5" value="0"> Oaxaca de Juaréz <br>
+                    <input type="radio" name="pregunta5" value="0"> Ciudad de México<br><br>
+            
+                    <label for="comentarios">Dejáme un comentario o tú opinión sobre el test:</label><br>
+                    <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
+            
+                    <input class="enviar" type="submit" value="Enviar">
+                </form>
+                <script src="JS2.js"></script>
+                <br><a href="BaseDatosFormulario1.php"><button class="calificacion">Verifica tu calificación</button></a>
+            </td>
+        </tr>
+    </table>
+
+    <footer>
+        <div class="Footer">
+            <div class="logo">
+                <a href="Ejemplo SW.html"><img src="http://localhost/Formul/BlogImg/blog.png" alt="EARA Blog"></a>
+            </div>
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/eder.ramirez.1422?mibextid=eHce3h" target="_blank"><img src="http://localhost/Formul/BlogImg/Facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/elderudito007?igsh=d3hsN2h2YmoxbW51" target="_blank"><img src="http://localhost/Formul/BlogImg/Instagram.png" alt="Instagram"></a>
+                <a href="https://api.whatsapp.com/send?phone=5523551239" target="_blank"><img src="http://localhost/Formul/BlogImg/Whatsapp.png" alt="Whatsapp"></a>
+                <a href="https://youtube.com/@elderudito0075?si=tCHt2LgoksZ4Rsut" target="_blank"><img src="http://localhost/Formul/BlogImg/Youtube.png" alt="Youtube"></a>
+                <a href="https://t.me/Eder_Ram" target="_blank"><img src="http://localhost/Formul/BlogImg/Telegram.png" alt="Telegram"></a>
+                <a href="https://discord.com/invite/JV746VYD" target="_blank"><img src="http://localhost/Formul/BlogImg/Discord.png" alt="Discord"></a>
+                <a href="https://www.tiktok.com/@eder_al_r?_t=8inTw24mEx4&_r=1" target="_blank"><img src="http://localhost/Formul/BlogImg/Tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

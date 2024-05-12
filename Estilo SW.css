@@ -1,0 +1,676 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background: black;
+}
+
+.contenedor-header{
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+.logo-EARA{
+    display: flex;
+}
+
+.logo-EARA img{
+    width: 90px;
+    height: 45px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.logo-EARA h4{
+    color: white;
+    font-weight: 100;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+/*Portada*/
+
+.contenedor-portada{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-image: url(https://images4.alphacoders.com/112/thumb-1920-1123054.jpg);
+    background-size: 200%;
+    animation: movimiento 20s infinite linear alternate;  
+}
+
+@keyframes movimiento{
+    from{
+        background-position: bottom left;
+    }to{
+        background-position: top right;
+    }
+}
+
+
+.degradado-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(left, black, #0672d0);
+    opacity: 0.5;
+}
+
+.contenedor-detalles-portada{
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+
+.detalles-portada{
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    top: 20px;
+    color: white;
+}
+
+.detalles-portada h1{
+    font-size: 40px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.detalles-portada p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.detalles-portada button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background: none;
+    border-style: none;
+    border: 1px solid white;
+    color: white;
+    margin-top: 20px;
+    transition: background 300ms;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.detalles-portada button:hover{
+    background: white;
+    color: black;
+}
+
+
+/*------------------------------------------------Articulo-----------------------------------------------*/
+
+main{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+article{
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    padding-right: 20px;
+}
+
+article h1{
+    font-size: 40px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+article hr{
+    max-width: 500px;
+    height: 4px;
+    border-style: none;
+    background: -webkit-linear-gradient(left, black, #0672d0);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+article p{
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+
+
+@media screen and (max-width: 500px){
+    .details p{
+        font-size: 18px;
+    }
+}
+
+
+/*----------------------------------CATEGORIAS----------------------------------------*/
+
+.menu-horizontal{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+}
+.menu-horizontal > li > a{
+	display: block;
+	padding: 15px 20px;
+	color: white;
+	text-decoration: none;
+}
+.menu-horizontal > li:hover{
+	background-color: red;
+}
+.menu-vertical{
+	position: absolute;
+	display: none;
+	list-style: none;
+	width: 200px;
+	background-color: rgba(0, 0, 0, .5);
+}
+.menu-horizontal li:hover .menu-vertical{
+	display: block;
+}
+.menu-vertical li:hover{
+	background-color: black;
+}
+
+.menu-vertical li a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 15px 15px 15px 20px;
+}
+
+.Articulos{
+    color: white;
+    text-align: center;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(31, 196, 190);
+}
+.Articulos:hover{
+    background: -webkit-linear-gradient(left, rgb(31, 196, 190), White);
+}
+.Recetas{
+    color: White;
+    text-align: left;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(64, 222, 170);
+}
+.Recetas:hover{
+    background: -webkit-linear-gradient(left, rgb(64, 222, 170), White);
+}
+.Videojuegos{
+    color: White;
+    text-align: left;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(17, 17, 17);
+}
+.Videojuegos:hover{
+    background: -webkit-linear-gradient(left, black, White);
+}
+img {
+    float: left;
+}
+
+
+
+
+
+
+
+
+/*---------------------Categorias imagenes en mov---------------------------------*/
+/*Articulos informativos*/
+
+.contenedor-Articulos{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-image: url(https://i.pinimg.com/originals/55/08/ef/5508efda89fecdb8dd13515835e5cff4.jpg);
+    background-size: 200%;
+    animation: movimiento 20s infinite linear alternate;  
+}
+
+@keyframes movimiento{
+    from{
+        background-position: bottom left;
+    }to{
+        background-position: top right;
+    }
+}
+
+
+.Capa-gradiente{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(left, black, #0672d0);
+    opacity: 0.5;
+}
+
+.Articulos-detalles{
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+
+.detalles{
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    top: 20px;
+    color: white;
+}
+
+.detalles h1{
+    font-size: 40px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.detalles p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.detalles button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background: none;
+    border-style: none;
+    border: 1px solid white;
+    color: white;
+    margin-top: 20px;
+    transition: background 300ms;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.detalles button:hover{
+    background: white;
+    color: black;
+}
+
+
+
+/*Recetas Caseras*/
+
+.contenedor-Recetas{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-image: url(https://pixelz.cc/wp-content/uploads/2018/10/pizza-uhd-4k-wallpaper.jpg);
+    background-size: 200%;
+    animation: movimiento 20s infinite linear alternate;  
+}
+
+@keyframes movimiento{
+    from{
+        background-position: bottom left;
+    }to{
+        background-position: top right;
+    }
+}
+
+
+.Capa-2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(left, black, #0672d0);
+    opacity: 0.5;
+}
+
+.Recetas-detalles2{
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+
+.detalles2{
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    top: 20px;
+    color: white;
+}
+
+.detalles2 h1{
+    font-size: 40px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.detalles2 p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.detalles2 button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background: none;
+    border-style: none;
+    border: 1px solid white;
+    color: white;
+    margin-top: 20px;
+    transition: background 300ms;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.detalles2 button:hover{
+    background: white;
+    color: black;
+}
+
+/*Videojuegos*/
+
+.contenedor-Videojuegos{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background-image: url(https://images5.alphacoders.com/134/1342568.jpeg);
+    background-size: 200%;
+    animation: movimiento 20s infinite linear alternate;  
+}
+
+@keyframes movimiento{
+    from{
+        background-position: bottom left;
+    }to{
+        background-position: top right;
+    }
+}
+
+
+.Capa-3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(left, black, #0672d0);
+    opacity: 0.5;
+}
+
+.Videojuegos-detalles3{
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+
+
+.detalles3{
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    top: 20px;
+    color: white;
+}
+
+.detalles3 h1{
+    font-size: 40px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.detalles3 p{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.detalles3 button{
+    padding: 10px 20px;
+    font-size: 16px;
+    background: none;
+    border-style: none;
+    border: 1px solid white;
+    color: white;
+    margin-top: 20px;
+    transition: background 300ms;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.detalles3 button:hover{
+    background: white;
+    color: black;
+}
+
+
+/*--------------------------------Footer----------------------------*/
+
+footer {
+    background: linear-gradient(to right, black, white);
+    color: #fff;
+    padding: 5px 0;
+    align-items: center;
+    text-align: left;
+}
+
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 80px; 
+}
+
+.redes-sociales a {
+    margin-right: 10px;
+}
+
+.redes-sociales img {
+    width: 35px; 
+}
+
+.redes-sociales a img:hover {
+    opacity: 0.8;
+}
+
+
+
+
+/*--------------------Para JavaScript Articulos-----------------*/
+.contenedor {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.articulo {
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.articulo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.articulo .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.articulo:hover .overlay {
+    opacity: 1;
+}
+
+.articulo h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.articulo p {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+
+/*------------------------------Para JavaScript Recetas-----------------------*/
+.contenedor2 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.receta {
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.receta img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.receta .cubierta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.receta:hover .cubierta {
+    opacity: 1;
+}
+
+.receta h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.receta p {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
+
+/*------------------------------Para JavaScript Videojuegos-----------------------*/
+.contenedor3 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.videojuegos {
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.videojuegos img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.videojuegos .cubierta2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.videojuegos:hover .cubierta2 {
+    opacity: 1;
+}
+
+.videojuegos h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.videojuegos p {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Jamones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .product h3 {
+            margin: 10px 0;
+        }
+        .product p {
+            color: #666;
+        }
+        .product button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background: #45a049;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tienda UCLM-AESH</h1>
+        <p>Tenemos calidad a precios bajos</p>
+    </header>
+    <div class="container">
+        <div class="products" id="product-list">
+            <!-- Aquí se cargarán dinámicamente los productos desde JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        // Cargar productos desde productos.json
+        fetch('productos.json')
+            .then(response => response.json())
+            .then(data => {
+                const productList = document.getElementById('product-list');
+                data.forEach(product => {
+                    const productDiv = document.createElement('div');
+                    productDiv.classList.add('product');
+
+                    const image = document.createElement('img');
+                    image.src = product.imagen;
+                    image.alt = product.nombre;
+                    productDiv.appendChild(image);
+
+                    const productName = document.createElement('h3');
+                    productName.textContent = product.nombre;
+                    productDiv.appendChild(productName);
+
+                    const price = document.createElement('p');
+                    price.textContent = `Precio: $${product.precio} por kilo`;
+                    productDiv.appendChild(price);
+
+                    const button = document.createElement('button');
+                    button.textContent = 'Comprar';
+                    button.addEventListener('click', () => {
+                        location.href = `compra.html?producto=${encodeURIComponent(product.nombre)}&precio=${encodeURIComponent(product.precio)}`;
+                    });
+                    productDiv.appendChild(button);
+
+                    productList.appendChild(productDiv);
+                });
+            })
+            .catch(error => console.error('Error al cargar los productos', error));
+    </script>
+</body>
+</html>

@@ -1,3 +1,15 @@
+<?php
+
+require 'config/database.php';
+$db = new Database(); 
+$con = $db->conectar();
+
+$sql = $con->prepare("SELECT id, nombre, precio FROM productos WHERE activo=1");
+$sql->execute();
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,21 +50,25 @@
 <main>
     <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
+      <?php foreach ($resultado as $row) { ?>  
+      <div class="col">
           <div class="card shadow-sm">
             <img src="images/productos/1/pavo.jpg">
             <div class="card-body">
               <h5 class="card-title">Jamon de Pavo</h5>
-            <p class="card-text">450 g $60</p>
+             <p class="card-text">450 g $60</p>
                 <div class="btn-group">
 
                 </div>
-                <a href="" class="btn btn-success">Agregar</a>
+                <a href="#" class="btn btn-success">Agregar</a>
               </div>
-            </div>
+             </div>
           </div>
+          <?php } ?>
         </div>
-    </div>
+        
+      
+      </div>
 </main>
 
 

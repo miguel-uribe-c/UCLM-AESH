@@ -53,10 +53,17 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
       <?php foreach ($resultado as $row) { ?>  
       <div class="col">
           <div class="card shadow-sm">
-            <img src="images/productos/1/pavo.jpg">
+            <?php
+            $id = $row['id'];
+            $imagen = "images/productos/" . $id . "/principal.jpg";
+            if (!file_exists($imagen)){
+                $imagen = "images/no-photo.jpg";
+            }
+            ?>
+          <img src="<?php echo $imagen; ?>">
             <div class="card-body">
-              <h5 class="card-title">Jamon de Pavo</h5>
-             <p class="card-text">450 g $60</p>
+              <h5 class="card-title"><?php echo $row['nombre']; ?></h5>
+             <p class="card-text"><?php echo number_format($row['precio'], 2, '.', '.'); ?></p>
                 <div class="btn-group">
 
                 </div>
